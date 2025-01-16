@@ -34,16 +34,30 @@ const teams = [
 
 const tableData = document.getElementById('tabella')
 
-for(let k of teams){
-    console.table(teams[k])
-    tableData.innerHTML += `<tr> <td> ${teams[k].nome} </td></tr>`
+// con il ciclo for cambio il valore di points 
+for (let i = 0; i < teams.length; i++){
+    teams[i].points = generaNumeroRandomRange(1, 114)
+    teams[i].foul = generaNumeroRandomRange(1, 114)
 }
 
 
+// con il ciclo for in stampo tutto in pagina
+for(let k in teams){
+    console.log(teams[k].nome) // stampo in console ogni oggetto
+    // stampo in pagina la lista di oggetti
+    tableData.innerHTML += `<tr>
+                                <td>${teams[k].nome}</td>
+                                <td>${teams[k].points}</td>
+                                <td>${teams[k].foul}</td> 
+                            </tr>` 
+}
 
+const namesFouls = []
 
-
-
+for (let i = 0; i < teams.length; i++){
+    namesFouls.push(teams[i].nome, teams[i].foul)
+    console.log(namesFouls)
+}
 
 
 

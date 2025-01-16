@@ -43,6 +43,8 @@ for(let i = 0; i < bicycles.length; i++){
         console.log(biciLeggera) //stampo il risultato in console 
         // stampo il risultato in pagina
         outputBicycle.innerHTML = `<strong>${biciLeggera.nome}</strong> con il peso di <strong>${biciLeggera.pesoKg}</strong>`
+    } else {
+         outputBicycle.innerHTML = `<strong>${biciLeggera.nome}</strong> con il peso di <strong>${biciLeggera.pesoKg}</strong>`
     }
 }
 
